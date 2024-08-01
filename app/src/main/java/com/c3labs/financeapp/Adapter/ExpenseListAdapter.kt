@@ -10,10 +10,11 @@ import com.c3labs.financeapp.Domain.ExpenseDomain
 import com.c3labs.financeapp.databinding.ViewholderItemsBinding
 
 class ExpenseListAdapter(private val items:MutableList<ExpenseDomain>): RecyclerView.Adapter<ExpenseListAdapter.Viewholder>() {
+
     class Viewholder (val binding: ViewholderItemsBinding):RecyclerView.ViewHolder(binding.root)
 
     private lateinit var context:Context
-    var formatter :DecimalFormat? = null
+    private var formatter :DecimalFormat? = null
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
